@@ -12,9 +12,13 @@
 		48B37A4A20C7ED1400F2F6AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B37A4820C7ED1400F2F6AB /* Main.storyboard */; };
 		48B37A4C20C7ED1700F2F6AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B37A4B20C7ED1700F2F6AB /* Assets.xcassets */; };
 		48B37A4F20C7ED1700F2F6AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B37A4D20C7ED1700F2F6AB /* LaunchScreen.storyboard */; };
+		48B7ADF020CA9ACA00A7BDEB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 48B7ADEF20CA9ACA00A7BDEB /* Podfile */; };
+		48B7ADF220CAA1E000A7BDEB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 48B7ADF120CAA1E000A7BDEB /* .gitignore */; };
+		B81BFA8DE6DB0D9007322119 /* Pods_OfflineNavi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FFC70C4805B92E29533C12F /* Pods_OfflineNavi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FFC70C4805B92E29533C12F /* Pods_OfflineNavi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfflineNavi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B37A4120C7ED1400F2F6AB /* OfflineNavi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfflineNavi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B37A4420C7ED1400F2F6AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48B37A4620C7ED1400F2F6AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		48B37A4B20C7ED1700F2F6AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48B37A4E20C7ED1700F2F6AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48B37A5020C7ED1700F2F6AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48B7ADEF20CA9ACA00A7BDEB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		48B7ADF120CAA1E000A7BDEB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		67C7A14E01604DE80D049664 /* Pods-OfflineNavi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineNavi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfflineNavi/Pods-OfflineNavi.debug.xcconfig"; sourceTree = "<group>"; };
+		74571003152E136CF7E2D9F4 /* Pods-OfflineNavi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineNavi.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfflineNavi/Pods-OfflineNavi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B81BFA8DE6DB0D9007322119 /* Pods_OfflineNavi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +47,12 @@
 		48B37A3820C7ED1300F2F6AB = {
 			isa = PBXGroup;
 			children = (
+				48B7ADF120CAA1E000A7BDEB /* .gitignore */,
+				48B7ADEF20CA9ACA00A7BDEB /* Podfile */,
 				48B37A4320C7ED1400F2F6AB /* OfflineNavi */,
 				48B37A4220C7ED1400F2F6AB /* Products */,
+				658C9BE50A951BFDD0870B07 /* Pods */,
+				A69E10868CA46197A5A13903 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +77,23 @@
 			path = OfflineNavi;
 			sourceTree = "<group>";
 		};
+		658C9BE50A951BFDD0870B07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67C7A14E01604DE80D049664 /* Pods-OfflineNavi.debug.xcconfig */,
+				74571003152E136CF7E2D9F4 /* Pods-OfflineNavi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A69E10868CA46197A5A13903 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FFC70C4805B92E29533C12F /* Pods_OfflineNavi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48B37A5320C7ED1800F2F6AB /* Build configuration list for PBXNativeTarget "OfflineNavi" */;
 			buildPhases = (
+				30D303001996A62316DF8529 /* [CP] Check Pods Manifest.lock */,
 				48B37A3D20C7ED1400F2F6AB /* Sources */,
 				48B37A3E20C7ED1400F2F6AB /* Frameworks */,
 				48B37A3F20C7ED1400F2F6AB /* Resources */,
+				DF7FC59A41ED3E3DEF743EC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,6 +154,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48B7ADF220CAA1E000A7BDEB /* .gitignore in Resources */,
+				48B7ADF020CA9ACA00A7BDEB /* Podfile in Resources */,
 				48B37A4F20C7ED1700F2F6AB /* LaunchScreen.storyboard in Resources */,
 				48B37A4C20C7ED1700F2F6AB /* Assets.xcassets in Resources */,
 				48B37A4A20C7ED1400F2F6AB /* Main.storyboard in Resources */,
@@ -129,6 +163,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30D303001996A62316DF8529 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OfflineNavi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF7FC59A41ED3E3DEF743EC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OfflineNavi/Pods-OfflineNavi-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfflineNavi/Pods-OfflineNavi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		48B37A3D20C7ED1400F2F6AB /* Sources */ = {
@@ -278,6 +355,7 @@
 		};
 		48B37A5420C7ED1800F2F6AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67C7A14E01604DE80D049664 /* Pods-OfflineNavi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +375,7 @@
 		};
 		48B37A5520C7ED1800F2F6AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74571003152E136CF7E2D9F4 /* Pods-OfflineNavi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
