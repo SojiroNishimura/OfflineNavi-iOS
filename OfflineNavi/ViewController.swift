@@ -12,23 +12,18 @@ import GooglePlaces
 
 class ViewController: UIViewController {
     
+    private var mapView: GMSMapView!
+    private var placesClient: GMSPlacesClient!
+
     private let locationManager = CLLocationManager()
     private var currentLocation: CLLocation?
     private let defaultLocation = CLLocation(latitude: -33.869405, longitude: 151.199)
-    private var mapView: GMSMapView!
-    private var placesClient: GMSPlacesClient!
+    private let accuracy = kCLLocationAccuracyHundredMeters * 3 // 300m
+    private let filterDistance = 100.0
     private let zoomLevel: Float = 15.0
     
     override func loadView() {
-        let camera = GMSCameraPosition.camera(withLatitude: defaultLocation.coordinate.latitude,
-                                              longitude: defaultLocation.coordinate.longitude,
-                                              zoom: zoomLevel)
-        mapView = GMSMapView.map(withFrame: .zero, camera: camera)
-        mapView.settings.myLocationButton = true
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.isMyLocationEnabled = true
-        mapView.isHidden = true
-        
+        mapView = createMap()
         view = mapView
     }
     
@@ -39,11 +34,23 @@ class ViewController: UIViewController {
         
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = 50
+        locationManager.desiredAccuracy = accuracy
+        locationManager.distanceFilter = filterDistance
         locationManager.startUpdatingLocation()
     }
     
+    func createMap() -> GMSMapView {
+        let camera = GMSCameraPosition.camera(withLatitude: defaultLocation.coordinate.latitude,
+                                              longitude: defaultLocation.coordinate.longitude,
+                                              zoom: zoomLevel)
+        let mv = GMSMapView.map(withFrame: .zero, camera: camera)
+        mv.delegate = self
+        mv.settings.myLocationButton = true
+        mv.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mv.isMyLocationEnabled = true
+        mv.isHidden = true
+        return mv
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
